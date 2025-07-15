@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Landing Arquitectura | Estudio Arquitectónico</title>
+  <meta name="description" content="Estudio Arquitectónico: diseño residencial, comercial y consultoría técnica. Explora proyectos destacados, conoce al equipo y solicita tu presupuesto.">
+
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Tu CSS personalizado -->
+  <link rel="stylesheet" href="/styles.css">
+  <!-- AOS Animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="font-sans antialiased text-gray-800">
+
+  <!-- NAVBAR -->
+  <nav id="navbar" role="navigation" class="fixed w-full bg-white bg-opacity-80 backdrop-blur-sm shadow z-50 transition-all">
+  <div class="container mx-auto px-6 py-5 flex justify-between items-center">
+    <a href="#hero" class="flex items-center logo-text text-2xl text-gray-800 font-semibold">
+      <img src="./recursos/logo.png" alt="Atria Estudio logo" class="h-14 w-auto mr-3">
+
+    </a>
+  
+
+      <ul class="hidden md:flex space-x-8 text-gray-700">
+        <li><a href="#servicios" class="hover:text-blue-600 transition border-b-2 border-transparent hover:border-blue-600">Servicios</a></li>
+        <li><a href="#portfolio" class="hover:text-blue-600 transition border-b-2 border-transparent hover:border-blue-600">Portfolio</a></li>
+        <li><a href="#testimonios" class="hover:text-blue-600 transition border-b-2 border-transparent hover:border-blue-600">Testimonios</a></li>
+        <li><a href="#equipo" class="hover:text-blue-600 transition border-b-2 border-transparent hover:border-blue-600">Equipo</a></li>
+        <li><a href="#contacto" class="hover:text-blue-600 transition border-b-2 border-transparent hover:border-blue-600">Contacto</a></li>
+      </ul>
+      <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 8h16M4 16h16"/>
+        </svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden bg-white bg-opacity-90 shadow-md">
+      <ul class="flex flex-col py-4 text-gray-700">
+        <li class="px-6 py-2 hover:bg-gray-100"><a href="#servicios">Servicios</a></li>
+        <li class="px-6 py-2 hover:bg-gray-100"><a href="#portfolio">Portfolio</a></li>
+        <li class="px-6 py-2 hover:bg-gray-100"><a href="#testimonios">Testimonios</a></li>
+        <li class="px-6 py-2 hover:bg-gray-100"><a href="#equipo">Equipo</a></li>
+        <li class="px-6 py-2 hover:bg-gray-100"><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero" class="relative h-screen flex items-center justify-center overflow-hidden">
+    <video class="absolute inset-0 w-full h-full object-cover" src="./recursos/video-hero.mov"
+           poster="./recursos/video-hero.mov" autoplay muted loop playsinline></video>
+    <div class="absolute inset-0 hero-gradient"></div>
+    <div class="relative z-10 text-center px-4" data-aos="fade-up">
+      <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">Creamos Espacios Inolvidables</h1>
+      <p class="text-white text-lg md:text-xl mb-6">Diseño arquitectónico a medida para tu proyecto</p>
+      <a href="#contacto"
+         class="inline-block bg-blue-600 text-white px-8 py-3 rounded-full text-lg font-medium transform transition hover:scale-105 hover:bg-blue-700">
+        Contáctanos
+      </a>
+    </div>
+    <div class="absolute bottom-10 text-white scroll-hint">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M19 9l-7 7-7-7"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- NUESTRO IMPACTO -->
+  <section id="stats" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Nuestro Impacto</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+        <!-- Proyectos entregados -->
+        <div data-aos="fade-up" data-aos-delay="100">
+          <img src="./recursos/icon_proyectos_entregados.png" alt="Proyectos entregados" class="h-12 w-12 mx-auto mb-2">
+          <h3 class="text-4xl font-semibold">120+</h3>
+          <p class="text-gray-600 mt-2">Proyectos entregados</p>
+        </div>
+        <!-- Clientes satisfechos -->
+        <div data-aos="fade-up" data-aos-delay="200">
+          <img src="./recursos/icon_clientes_satisfechos.png" alt="Clientes satisfechos" class="h-12 w-12 mx-auto mb-2">
+          <h3 class="text-4xl font-semibold">85+</h3>
+          <p class="text-gray-600 mt-2">Clientes satisfechos</p>
+        </div>
+        <!-- Años de experiencia -->
+        <div data-aos="fade-up" data-aos-delay="300">
+          <img src="./recursos/icon_anios_experiencia.png" alt="Años de experiencia" class="h-12 w-12 mx-auto mb-2">
+          <h3 class="text-4xl font-semibold">10</h3>
+          <p class="text-gray-600 mt-2">Años de experiencia</p>
+        </div>
+        <!-- Certificaciones verdes -->
+        <div data-aos="fade-up" data-aos-delay="400">
+          <img src="./recursos/icon_certificaciones_verdes.png" alt="Certificaciones verdes" class="h-12 w-12 mx-auto mb-2">
+          <h3 class="text-4xl font-semibold">3</h3>
+          <p class="text-gray-600 mt-2">Certificaciones verdes</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section id="servicios" class="py-20 parallax" style="background-image:url('./recursos/bg_servicios.png')">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-12" data-aos="fade-up">Nuestros Servicios</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Diseño Residencial -->
+<div class="group relative overflow-hidden rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="100">
+  <!-- fondo con proporción + filtro + duotono -->
+  <div 
+    class="card-img aspect-4-3 bg-cover bg-center relative" 
+    style="background-image: url('/recursos/residencial_realista.png')">
+  </div>
+  <!-- overlay semitransparente para legibilidad -->
+  <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+  <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white p-6">
+    <h3 class="text-2xl font-semibold mb-2">Diseño Residencial</h3>
+    <p>Proyectos de viviendas unifamiliares con atención al detalle y eficiencia espacial.</p>
+  </div>
+</div>
+        <!-- Espacios Comerciales -->
+<div class="group relative overflow-hidden rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="200">
+  <div 
+    class="card-img aspect-4-3 bg-cover bg-center relative" 
+    style="background-image: url('./recursos/comercial_realista.png')">
+  </div>
+  <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+  <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white p-6">
+    <h3 class="text-2xl font-semibold mb-2">Espacios Comerciales</h3>
+    <p>Diseño de locales y oficinas que potencian la experiencia del cliente.</p>
+  </div>
+</div>
+     <!-- Consultoría Técnica -->
+<div class="group relative overflow-hidden rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="300">
+  <div 
+    class="card-img aspect-4-3 bg-cover bg-center relative" 
+    style="background-image: url('./recursos/consultoria_blueprint3d.png')">
+  </div>
+  <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+  <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white p-6">
+    <h3 class="text-2xl font-semibold mb-2">Consultoría Técnica</h3>
+    <p>Asesoramiento integral en normativas, materiales y sostenibilidad.</p>
+  </div>
+</div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS -->
+  <section id="testimonios" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-8" data-aos="fade-up">Lo que dicen nuestros clientes</h2>
+      <div class="relative max-w-xl mx-auto">
+        <div class="testimonial active p-8 bg-white rounded-xl shadow-md" data-aos="fade-up">
+          <p class="text-gray-800 mb-4 italic">“El equipo transformó nuestra visión en realidad. Profesionalismo y creatividad impecables.”</p>
+          <h4 class="font-semibold text-blue-700">Juan Pérez</h4>
+          <span class="text-gray-500 text-sm">CEO, Inmobiliaria XYZ</span>
+        </div>
+        <div class="testimonial p-6 bg-white rounded-lg shadow-lg" data-aos="fade-up">
+          <p class="text-gray-800 mb-4 italic">“Excelente coordinación y entrega a tiempo. Superó todas nuestras expectativas.”</p>
+          <h4 class="font-semibold text-blue-700">María Gómez</h4>
+          <span class="text-gray-500 text-sm">Directora, Hotel Boutique</span>
+        </div>
+        <button id="prevTest" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow hover:bg-gray-100">‹</button>
+        <button id="nextTest" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow hover:bg-gray-100">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio" class="py-20 bg-gray-100">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-8" data-aos="fade-up">Proyectos Destacados</h2>
+      <div class="flex justify-center mb-8 space-x-4" data-aos="fade-up">
+        <button class="filter-btn px-4 py-2 bg-white rounded-full shadow hover:bg-blue-600 hover:text-white transition" data-filter="all">Todos</button>
+        <button class="filter-btn px-4 py-2 bg-white rounded-full shadow hover:bg-blue-600 hover:text-white transition" data-filter="residencial">Residencial</button>
+        <button class="filter-btn px-4 py-2 bg-white rounded-full shadow hover:bg-blue-600 hover:text-white transition" data-filter="comercial">Comercial</button>
+        <button class="filter-btn px-4 py-2	bg-white rounded-full shadow hover:bg-blue-600 hover:text-white transition" data-filter="interior">Interior</button>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+  <!-- Interior Minimalista -->
+  <div class="bg-white rounded-lg overflow-hidden shadow-lg group project-card" data-category="interior" data-aos="zoom-in" data-aos-delay="100">
+    <div class="project-img-container">
+      <img src="./recursos/interior_minimalista_card.png" alt="Interior Minimalista">
+    </div>
+    <div class="p-6">
+      <h3 class="text-xl font-semibold mb-2">Interior Minimalista</h3>
+      <p class="text-gray-600 mb-4">Diseño interior con estética minimalista y funcional.</p>
+      <a href="./recursos/caso_estudio_interior.pdf" class="inline-block text-blue-600 hover:underline mr-4">Descargar caso de estudio</a>
+      <a href="#" class="text-blue-600 hover:underline">Ver más →</a>
+    </div>
+  </div>
+
+  <!-- Edificio Corporativo -->
+  <div class="bg-white rounded-lg overflow-hidden shadow-lg group project-card" data-category="comercial" data-aos="zoom-in" data-aos-delay="200">
+    <div class="project-img-container">
+      <img src="./recursos/edificio_corporativo_card.png" alt="Edificio Corporativo">
+    </div>
+    <div class="p-6">
+      <h3 class="text-xl font-semibold mb-2">Edificio Corporativo</h3>
+      <p class="text-gray-600 mb-4">Proyecto de oficinas corporativas con diseño sostenible.</p>
+      <a href="#" class="inline-block text-blue-600 hover:underline mr-4">Descargar caso de estudio</a>
+      <a href="#" class="text-blue-600 hover:underline">Ver más →</a>
+    </div>
+  </div>
+
+  <!-- Casa Moderna -->
+  <div class="bg-white rounded-lg overflow-hidden shadow-lg group project-card" data-category="residencial" data-aos="zoom-in" data-aos-delay="300">
+    <div class="project-img-container">
+      <img src="./recursos/casa_moderna_card.png" alt="Casa Moderna">
+    </div>
+    <div class="p-6">
+      <h3 class="text-xl font-semibold mb-2">Casa Moderna</h3>
+      <p class="text-gray-600 mb-4">Residencia unifamiliar de líneas contemporáneas.</p>
+      <a href="#" class="inline-block text-blue-600 hover:underline mr-4">Descargar caso de estudio</a>
+      <a href="#" class="text-blue-600 hover:underline">Ver más →</a>
+    </div>
+  </div>
+</div>
+    </div>
+  </section>
+
+  <!-- EQUIPO -->
+  <section id="equipo" class="py-20">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl	font-bold text-center mb-12" data-aos="fade-up">Nuestro Equipo</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+          <img src="./recursos/avatar_mujer_plana.png" alt="Arquitecta A" class="mx-auto rounded-full w-30 h-32 mb-6">
+          <h4 class="font-semibold text-xl">Arquitecta A</h4>
+          <p class="text-gray-600 mb-2">Directora de Proyecto</p>
+          <a href="#" class="text-blue-600 hover:underline">LinkedIn</a>
+        </div>
+        <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+          <img src="./recursos/avatar_mujer_plana.png" alt="Arquitecta B" class="mx-auto rounded-full w-30 h-32 mb-6">
+          <h4 class="font-semibold text-xl">Arquitecta B</h4>
+          <p class="text-gray-600 mb-2">Responsable de Diseño</p>
+          <a href="#" class="text-blue-600 hover:underline">LinkedIn</a>
+        </div>
+        <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+          <img src="./recursos/avatar_mujer_plana.png" alt="Arquitecta C" class="mx-auto rounded-full w-30 h-32 mb-6">
+          <h4 class="font-semibold text-xl">Arquitecta C</h4>
+          <p class="text-gray-600 mb-2">Coordinadora de Obra</p>
+          <a href="#" class="text-blue-600 hover:underline">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="py-20 bg-gray-100">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl	md:text-4xl	font-bold text-center mb-12" data-aos="fade-up">Contáctanos</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <form class="space-y-6" data-aos="fade-up" data-aos-delay="100">
+          <label class="block"><span class="text-gray-700">Nombre</span>
+            <input type="text" placeholder="Tu nombre" required class="w-full p-4 border rounded focus:ring-2 focus:ring-blue-600">
+          </label>
+          <label class="block"><span class="text-gray-700">Correo electrónico</span>
+            <input type="email" placeholder="tu@correo.com" required class="w-full p-4 border rounded focus:ring-2 focus:ring-blue-600">
+          </label>
+          <label class="block"><span class="text-gray-700">Mensaje</span>
+            <textarea placeholder="Tu mensaje..." rows="5" required class="w-full p-4 border rounded focus:ring-2 focus:ring-blue-600"></textarea>
+          </label>
+          <button type="submit" class="w-full bg-blue-600 text-white px-6 py-3 rounded-full font-medium hover:bg-blue-700 transition">Solicitar presupuesto</button>
+        </form>
+        <div class="h-80 w-full rounded-lg overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="200">
+          <iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.940168827987!2d-64.21401758499277!3d-23.135985484880716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941c51fe74f20fc7%3A0x76343b9831f7d4f2!2sSan%20Ram%C3%B3n%20de%20la%20Nueva%20Or%C3%A1n%2C%20Salta!5e0!3m2!1ses!2sar!4v1721120000000!5m2!1ses!2sar"
+  width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOTONES FLOTANTES -->
+<div class="fixed bottom-6 right-6 flex flex-col items-end gap-3 z-50">
+  <!-- WhatsApp -->
+  <a href="https://wa.me/5491123456789" target="_blank" aria-label="WhatsApp"
+     class="w-12 h-12 bg-gradient-to-br from-green-400 to-green-600 hover:from-green-500 hover:to-green-700 text-white rounded-full flex items-center justify-center shadow-xl transform transition hover:scale-110">
+    <i class="fab fa-whatsapp text-xl"></i>
+  </a>
+
+  <!-- Email -->
+  <a href="mailto:info@tuempresa.com" aria-label="Email"
+     class="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 hover:from-blue-500 hover:to-blue-700 text-white rounded-full flex items-center justify-center shadow-xl transform transition hover:scale-110">
+    <i class="fas fa-envelope text-xl"></i>
+  </a>
+</div>
+
+  <!-- SCRIPTS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+
+    // Menú móvil
+    document.getElementById('menu-btn').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+
+    // Navbar scroll
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) navbar.classList.add('bg-opacity-100','shadow-lg');
+      else navbar.classList.remove('bg-opacity-100','shadow-lg');
+    });
+
+    // Slider testimonios
+    let idx = 0;
+    const items = document.querySelectorAll('.testimonial');
+    document.getElementById('prevTest').addEventListener('click', () => {
+      items[idx].classList.remove('active');
+      idx = (idx - 1 + items.length) % items.length;
+      items[idx].classList.add('active');
+    });
+    document.getElementById('nextTest').addEventListener('click', () => {
+      items[idx].classList.remove('active');
+      idx = (idx + 1) % items.length;
+      items[idx].classList.add('active');
+    });
+
+    // Filtros portfolio
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const cat = btn.dataset.filter;
+        document.querySelectorAll('.project-card').forEach(card => {
+          card.style.display = (cat === 'all' || card.dataset.category === cat) ? 'block' : 'none';
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
