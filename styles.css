@@ -156,6 +156,10 @@
   #servicios .group {
     margin-bottom: 1.5rem;
   }
+    #servicios .container > .grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+  }
 
   /* 5. PORTFOLIO */
   #portfolio .grid {
@@ -166,6 +170,16 @@
     padding: 0.5rem 1rem;
     font-size: 0.85rem;
   }
+   #portfolio .container > .grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+  }
+  /* Espacio entre cards */
+  #servicios .grid > * ,
+  #portfolio .grid > * {
+    margin-bottom: 1rem;
+  }
+
 
   /* 6. TESTIMONIOS */
   #testimonios .testimonial {
