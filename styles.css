@@ -91,18 +91,26 @@
   transform: scale(1.05);
 }
 
-/* Breakpoint para móviles (hasta 640px) */
+/* =================================================== */
+/*    MEDIA QUERIES PARA ADAPTACIÓN EN MÓVIL Y TABLET   */
+/* =================================================== */
+
+/* ————————————————————— */
+/*  MÓVIL (hasta 640px) */
+/* ————————————————————— */
 @media (max-width: 640px) {
-  /* HERO */
+  /* 1. HERO */
   #hero {
-    height: auto;               /* Que no obligue a 100vh */
-    padding: 4rem 1rem;         /* Añade relleno superior/inferior */
+    min-height: 100vh;       /* que no obligue a 100vh */
+    height: auto;            /* deja que crezca según contenido */
+    padding: 4rem 1rem;      /* hueco para navbar + espaciado */
   }
   #hero video {
-    object-position: center top; /* Centrar la parte superior del vídeo */
+    object-fit: cover;
+    object-position: center top; /* muestra la parte más importante */
   }
   #hero h1 {
-    font-size: 2rem;            /* Texto más pequeño */
+    font-size: 2rem;
     line-height: 1.2;
   }
   #hero p {
@@ -112,34 +120,47 @@
     padding: 0.75rem 1.5rem;
     font-size: 0.875rem;
   }
-
-  /* NAVBAR */
-  nav {
-    padding: 0.5rem 1rem;
+  .scroll-hint {
+    display: none;           /* oculta la flecha de scroll */
   }
+
+  /* 2. NAVBAR */
   nav .container {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
   nav ul {
-    display: none; /* Oculta el menú de escritorio */
+    display: none;           /* oculta menú desktop */
   }
   #menu-btn {
-    display: block; /* Botón hamburguesa visible */
+    display: block;          /* muestra hamburguesa */
   }
 
-  /* SERVICIOS */
+  /* 3. NUESTRO IMPACTO */
+  #stats .grid {
+    grid-template-columns: 1fr !important;
+  }
+  #stats img {
+    margin: 0 auto;          /* centra iconos */
+  }
+
+  /* 4. SERVICIOS */
+  #servicios.parallax {
+    background-attachment: scroll; /* desactiva parallax fijo */
+    background-position: center;
+  }
   #servicios .grid {
-    grid-template-columns: 1fr; /* Una columna */
+    grid-template-columns: 1fr;  /* una columna */
     gap: 1.5rem;
   }
   #servicios h2 {
     font-size: 1.75rem;
   }
 
-  /* PORTFOLIO */
+  /* 5. PORTFOLIO */
   #portfolio .grid {
-    grid-template-columns: 1fr; /* Una columna */
+    grid-template-columns: 1fr;  /* una columna */
     gap: 1.5rem;
   }
   #portfolio .filter-btn {
@@ -147,7 +168,7 @@
     font-size: 0.875rem;
   }
 
-  /* TESTIMONIOS */
+  /* 6. TESTIMONIOS */
   #testimonios .testimonial {
     padding: 1.5rem;
   }
@@ -155,32 +176,37 @@
     font-size: 1.75rem;
   }
 
-  /* EQUIPO */
+  /* 7. EQUIPO */
   #equipo .grid {
-    grid-template-columns: 1fr; /* Una columna */
+    grid-template-columns: 1fr;  /* una columna */
     gap: 2rem;
   }
 
-  /* CONTACTO */
+  /* 8. CONTACTO */
   #contacto .grid {
-    grid-template-columns: 1fr; /* Formulario y mapa en vertical */
+    grid-template-columns: 1fr;  /* formulario y mapa en vertical */
     gap: 2rem;
   }
 
-  /* BOTONES FLOTANTES */
+  /* 9. BOTONES FLOTANTES */
   .fixed.bottom-6.right-6 {
     bottom: 1rem;
     right: 1rem;
   }
+  .fixed a.w-12.h-12 {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
 }
 
-/* Breakpoint tablets (hasta 768px) */
+/* —————————————————————— */
+/*  TABLETS (hasta 768px)  */
+/* —————————————————————— */
 @media (max-width: 768px) {
+  /* Grid 2 columnas para servicios, portfolio y equipo */
   #servicios .grid,
-  #portfolio .grid {
-    grid-template-columns: 1fr 1fr; /* Dos columnas */
-  }
+  #portfolio .grid,
   #equipo .grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
