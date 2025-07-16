@@ -51,25 +51,35 @@
   </nav>
 
   <!-- HERO -->
-  <section id="hero" class="relative h-screen flex items-center justify-center overflow-hidden">
-    <video class="absolute inset-0 w-full h-full object-cover" src="./recursos/video-hero.mp4"
-           poster="./recursos/video-hero.mov" autoplay muted loop playsinline></video>
-    <div class="absolute inset-0 hero-gradient"></div>
-    <div class="relative z-10 text-center px-4" data-aos="fade-up">
-      <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">Creamos Espacios Inolvidables</h1>
-      <p class="text-white text-lg md:text-xl mb-6">Diseño arquitectónico a medida para tu proyecto</p>
-      <a href="#contacto"
-         class="inline-block bg-blue-600 text-white px-8 py-3 rounded-full text-lg font-medium transform transition hover:scale-105 hover:bg-blue-700">
-        Contáctanos
-      </a>
-    </div>
-    <div class="absolute bottom-10 text-white scroll-hint">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M19 9l-7 7-7-7"/>
-      </svg>
-    </div>
-  </section>
+ <section id="hero"
+         class="relative flex items-center justify-center overflow-hidden
+                h-screen md:h-screen sm:h-auto pt-20">
+  <video class="absolute inset-0 w-full h-full object-cover"
+         muted loop autoplay playsinline poster="recursos/hero-poster.jpg">
+    <source src="recursos/video-hero.mp4" type="video/mp4">
+    <img src="recursos/hero-poster.jpg" alt="Fallback hero">
+  </video>
+  <div class="absolute inset-0 hero-gradient"></div>
+  <div class="relative z-10 text-center px-4">
+    <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">Creamos Espacios Inolvidables</h1>
+    <p class="text-white text-lg md:text-xl mb-6">Diseño arquitectónico a medida para tu proyecto</p>
+    <a href="#contacto"
+       class="inline-block bg-blue-600 text-white px-8 py-3 rounded-full
+              text-lg font-medium hover:scale-105 hover:bg-blue-700 transition">
+      Contáctanos
+    </a>
+  </div>
+  <!-- opcionalmente quita la flecha en móvil con CSS -->
+  <div class="absolute bottom-10 text-white scroll-hint">
+    <svg xmlns="http://www.w3.org/2000/svg"
+         class="h-8 w-8 mx-auto" fill="none"
+         viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M19 9l-7 7-7-7"/>
+    </svg>
+  </div>
+</section>
+
 
   <!-- NUESTRO IMPACTO -->
   <section id="stats" class="py-16 bg-gray-50">
@@ -104,51 +114,53 @@
     </div>
   </section>
 
-  <!-- SERVICIOS -->
-  <section id="servicios" class="py-20 parallax" style="background-image:url('./recursos/bg_servicios.png')">
-    <div class="container mx-auto px-6">
-      <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-12" data-aos="fade-up">Nuestros Servicios</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Diseño Residencial -->
-<div class="group relative overflow-hidden rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="100">
-  <!-- fondo con proporción + filtro + duotono -->
-  <div 
-    class="card-img aspect-4-3 bg-cover bg-center relative" 
-    style="background-image: url('/recursos/residencial_realista.png')">
-  </div>
-  <!-- overlay semitransparente para legibilidad -->
-  <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-  <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white p-6">
-    <h3 class="text-2xl font-semibold mb-2">Diseño Residencial</h3>
-    <p>Proyectos de viviendas unifamiliares con atención al detalle y eficiencia espacial.</p>
-  </div>
-</div>
-        <!-- Espacios Comerciales -->
-<div class="group relative overflow-hidden rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="200">
-  <div 
-    class="card-img aspect-4-3 bg-cover bg-center relative" 
-    style="background-image: url('./recursos/comercial_realista.png')">
-  </div>
-  <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-  <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white p-6">
-    <h3 class="text-2xl font-semibold mb-2">Espacios Comerciales</h3>
-    <p>Diseño de locales y oficinas que potencian la experiencia del cliente.</p>
-  </div>
-</div>
-     <!-- Consultoría Técnica -->
-<div class="group relative overflow-hidden rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="300">
-  <div 
-    class="card-img aspect-4-3 bg-cover bg-center relative" 
-    style="background-image: url('./recursos/consultoria_blueprint3d.png')">
-  </div>
-  <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-  <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white p-6">
-    <h3 class="text-2xl font-semibold mb-2">Consultoría Técnica</h3>
-    <p>Asesoramiento integral en normativas, materiales y sostenibilidad.</p>
-  </div>
-</div>
+  <section id="servicios"
+         class="py-20 parallax bg-cover bg-center"
+         style="background-image:url('recursos/bg_servicios.png')">
+  <div class="container mx-auto px-6">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-12"
+        data-aos="fade-up">Nuestros Servicios</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Diseño Residencial -->
+      <div class="group relative overflow-hidden rounded-lg shadow-lg"
+           data-aos="fade-up" data-aos-delay="100">
+        <div class="h-60 bg-cover bg-center filter brightness-75"
+             style="background-image:url('recursos/residencial_realista.png')"></div>
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div class="absolute inset-0 flex flex-col items-center justify-center
+                    text-center text-white p-6">
+          <h3 class="text-2xl font-semibold mb-2">Diseño Residencial</h3>
+          <p>Proyectos de viviendas unifamiliares con atención al detalle y eficiencia espacial.</p>
+        </div>
+      </div>
+      <!-- Espacios Comerciales -->
+      <div class="group relative overflow-hidden rounded-lg shadow-lg"
+           data-aos="fade-up" data-aos-delay="200">
+        <div class="h-60 bg-cover bg-center filter brightness-75"
+             style="background-image:url('recursos/comercial_realista.png')"></div>
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div class="absolute inset-0 flex flex-col items-center justify-center
+                    text-center text-white p-6">
+          <h3 class="text-2xl font-semibold mb-2">Espacios Comerciales</h3>
+          <p>Diseño de locales y oficinas que potencian la experiencia del cliente.</p>
+        </div>
+      </div>
+      <!-- Consultoría Técnica -->
+      <div class="group relative overflow-hidden rounded-lg shadow-lg"
+           data-aos="fade-up" data-aos-delay="300">
+        <div class="h-60 bg-cover bg-center filter brightness-75"
+             style="background-image:url('recursos/consultoria_blueprint3d.png')"></div>
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div class="absolute inset-0 flex flex-col items-center justify-center
+                    text-center text-white p-6">
+          <h3 class="text-2xl font-semibold mb-2">Consultoría Técnica</h3>
+          <p>Asesoramiento integral en normativas, materiales y sostenibilidad.</p>
+        </div>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- TESTIMONIOS -->
   <section id="testimonios" class="py-20 bg-gray-50">

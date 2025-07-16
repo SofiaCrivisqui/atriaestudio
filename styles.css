@@ -91,81 +91,80 @@
   transform: scale(1.05);
 }
 
-/* =================================================== */
-/*    MEDIA QUERIES PARA ADAPTACIÓN EN MÓVIL Y TABLET   */
-/* =================================================== */
+/* ============================== */
+/* MEDIA QUERIES: MOBILE & TABLET */
+/* ============================== */
 
-/* ————————————————————— */
-/*  MÓVIL (hasta 640px) */
-/* ————————————————————— */
+/* ——— MÓVIL (≤ 640px) ——— */
 @media (max-width: 640px) {
+
   /* 1. HERO */
   #hero {
-    min-height: 100vh;       /* que no obligue a 100vh */
-    height: auto;            /* deja que crezca según contenido */
-    padding: 4rem 1rem;      /* hueco para navbar + espaciado */
+    /* no forzar 100vh: que crezca según contenido + espacio para navbar */
+    min-height: auto;
+    height: auto;
+    padding-top: 5rem;    /* deja hueco para el navbar */
+    padding-bottom: 3rem;
   }
   #hero video {
     object-fit: cover;
-    object-position: center top; /* muestra la parte más importante */
+    object-position: center top;
+  }
+  #hero .relative {
+    padding: 2rem 1.5rem; /* reduce padding interno */
   }
   #hero h1 {
-    font-size: 2rem;
+    font-size: 1.75rem;
     line-height: 1.2;
   }
   #hero p {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
   #hero a {
-    padding: 0.75rem 1.5rem;
+    padding: 0.6rem 1.2rem;
     font-size: 0.875rem;
   }
   .scroll-hint {
-    display: none;           /* oculta la flecha de scroll */
+    display: none;  /* oculta la flecha */
   }
 
   /* 2. NAVBAR */
   nav .container {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
-  nav ul {
-    display: none;           /* oculta menú desktop */
-  }
-  #menu-btn {
-    display: block;          /* muestra hamburguesa */
-  }
+  nav ul { display: none; }
+  #menu-btn { display: block; }
 
   /* 3. NUESTRO IMPACTO */
   #stats .grid {
     grid-template-columns: 1fr !important;
   }
   #stats img {
-    margin: 0 auto;          /* centra iconos */
+    margin: 0 auto;
   }
 
   /* 4. SERVICIOS */
   #servicios.parallax {
-    background-attachment: scroll; /* desactiva parallax fijo */
-    background-position: center;
+    background-attachment: scroll;
+    background-position: center center;
   }
   #servicios .grid {
-    grid-template-columns: 1fr;  /* una columna */
-    gap: 1.5rem;
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem;
   }
-  #servicios h2 {
-    font-size: 1.75rem;
+  #servicios .group {
+    margin-bottom: 1.5rem;
   }
 
   /* 5. PORTFOLIO */
   #portfolio .grid {
-    grid-template-columns: 1fr;  /* una columna */
-    gap: 1.5rem;
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem;
   }
   #portfolio .filter-btn {
     padding: 0.5rem 1rem;
-    font-size: 0.875rem;
+    font-size: 0.85rem;
   }
 
   /* 6. TESTIMONIOS */
@@ -178,13 +177,13 @@
 
   /* 7. EQUIPO */
   #equipo .grid {
-    grid-template-columns: 1fr;  /* una columna */
+    grid-template-columns: 1fr !important;
     gap: 2rem;
   }
 
   /* 8. CONTACTO */
   #contacto .grid {
-    grid-template-columns: 1fr;  /* formulario y mapa en vertical */
+    grid-template-columns: 1fr !important;
     gap: 2rem;
   }
 
@@ -199,14 +198,11 @@
   }
 }
 
-/* —————————————————————— */
-/*  TABLETS (hasta 768px)  */
-/* —————————————————————— */
+/* ——— TABLETS (≤ 768px) ——— */
 @media (max-width: 768px) {
-  /* Grid 2 columnas para servicios, portfolio y equipo */
   #servicios .grid,
   #portfolio .grid,
   #equipo .grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr) !important;
   }
 }
