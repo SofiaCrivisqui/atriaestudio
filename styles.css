@@ -206,3 +206,14 @@
     grid-template-columns: repeat(2, 1fr) !important;
   }
 }
+
+/* Ajuste de altura del Hero */
+#hero {
+  height: 80vh;            /* ocupa el 80% de la ventana */
+}
+@media (min-width: 768px) {
+  #hero { height: 90vh; }  /* en tablets/desktop sube al 90vh */
+}
+@media (max-width: 640px) {
+  #hero { height: 70vh; }  /* en móvil baja a 70vh para que no quede muy corto */
+}
