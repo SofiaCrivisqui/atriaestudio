@@ -90,3 +90,97 @@
   filter: none;
   transform: scale(1.05);
 }
+
+/* Breakpoint para móviles (hasta 640px) */
+@media (max-width: 640px) {
+  /* HERO */
+  #hero {
+    height: auto;               /* Que no obligue a 100vh */
+    padding: 4rem 1rem;         /* Añade relleno superior/inferior */
+  }
+  #hero video {
+    object-position: center top; /* Centrar la parte superior del vídeo */
+  }
+  #hero h1 {
+    font-size: 2rem;            /* Texto más pequeño */
+    line-height: 1.2;
+  }
+  #hero p {
+    font-size: 1rem;
+  }
+  #hero a {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+  }
+
+  /* NAVBAR */
+  nav {
+    padding: 0.5rem 1rem;
+  }
+  nav .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav ul {
+    display: none; /* Oculta el menú de escritorio */
+  }
+  #menu-btn {
+    display: block; /* Botón hamburguesa visible */
+  }
+
+  /* SERVICIOS */
+  #servicios .grid {
+    grid-template-columns: 1fr; /* Una columna */
+    gap: 1.5rem;
+  }
+  #servicios h2 {
+    font-size: 1.75rem;
+  }
+
+  /* PORTFOLIO */
+  #portfolio .grid {
+    grid-template-columns: 1fr; /* Una columna */
+    gap: 1.5rem;
+  }
+  #portfolio .filter-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+
+  /* TESTIMONIOS */
+  #testimonios .testimonial {
+    padding: 1.5rem;
+  }
+  #testimonios h2 {
+    font-size: 1.75rem;
+  }
+
+  /* EQUIPO */
+  #equipo .grid {
+    grid-template-columns: 1fr; /* Una columna */
+    gap: 2rem;
+  }
+
+  /* CONTACTO */
+  #contacto .grid {
+    grid-template-columns: 1fr; /* Formulario y mapa en vertical */
+    gap: 2rem;
+  }
+
+  /* BOTONES FLOTANTES */
+  .fixed.bottom-6.right-6 {
+    bottom: 1rem;
+    right: 1rem;
+  }
+}
+
+/* Breakpoint tablets (hasta 768px) */
+@media (max-width: 768px) {
+  #servicios .grid,
+  #portfolio .grid {
+    grid-template-columns: 1fr 1fr; /* Dos columnas */
+  }
+  #equipo .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
